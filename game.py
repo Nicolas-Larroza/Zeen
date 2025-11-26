@@ -57,5 +57,3 @@ while player.is_alive():
             continue
     elif choice == '4':
         break
-print("test")
-#test, ignore please
