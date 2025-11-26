@@ -56,5 +56,6 @@ while player.is_alive():
         elif inv_choice == '4':
             continue
     elif choice == '4':
-        break        
-            
+        break
+print("test")
+#test, ignore please
