@@ -2,6 +2,8 @@ import math
 import random
 from .character_framework import Npc
 import engine.logic.inventory as inv
+from .player import player
+from items import player_inventory, objects
 class Enemy(Npc):
     def __init__(self, health=20, alive=True, damage=1, defense=0, exp_give = 1, name ='dude'):
         super().__init__(health, alive)
@@ -22,17 +24,25 @@ class Enemy(Npc):
             target.exp += self.exp_give
 
 class Goblin(Enemy):
-    def __init__(self, health=10, alive=True, damage=3, defense = 1, exp_give=100, name = 'goblin'):
+    def __init__(self, health=10, alive=True, damage=8, defense = 1, exp_give=30, name = 'goblin'):
         super().__init__(health, alive, damage, defense, exp_give)
         self.name = name
+
 class Zombie(Enemy):
-    def __init__(self, health=20, alive=True, damage=6, defense = 3, exp_give=10, name = 'zombie'):
+    def __init__(self, health=20, alive=True, damage=12, defense = 3, exp_give=100, name = 'zombie'):
+        super().__init__(health, alive, damage, defense, exp_give)
+        self.name = name
+        
+class Dragon(Enemy):
+    def __init__(self, health=40, alive=True, damage=15, defense = 1, exp_give=0, name = 'dragon'):
         super().__init__(health, alive, damage, defense, exp_give)
         self.name = name
         
 def enemy_drop():
     if random.random() < 0.50:
-        healing_potion = inv.HealingPotion('007', 'Healing potion', 'its a potion... that heals you... name is pretty self-explanatory.', 50)
+        healing_potion = inv.Potion('007', 'Healing potion', 'its a potion... that heals you... name is pretty self-explanatory.', 50)
         print("enemy dropped a Healing potion!")
-        inv.player_inventory.add_item(healing_potion)
-        
+        player_inventory.add_item(healing_potion)
+            
+            
+    

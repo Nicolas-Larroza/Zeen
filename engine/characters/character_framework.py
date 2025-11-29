@@ -6,7 +6,7 @@ class Npc:
         self.defense = defense
     def take_damage(self, amount):
         self.health -= (amount)
-        if self.health <0:
+        if self.health <1:
             self.alive = False
             self.health = 0
     def is_alive(self):

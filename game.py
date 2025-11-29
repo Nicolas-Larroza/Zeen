@@ -2,16 +2,15 @@ from engine.characters.player import player, Player
 import random
 import engine.logic.inventory as inv
 from engine.logic.combat import combat
-from engine.logic.inventory import player_inventory
-
+from items import player_inventory
 def explore():
     print("you venture deeper...")
-    if random.random() < 0.70:
+    if random.random() < 0.90:
         combat()
     else:
         print('seems quiet... you rest and replenish your health.')
         player.health = player.max_health
-
+#I'll use depth at some point... probably :p
 depth = 0
 print("you wake up, disoriented. you examine your surroundings. you appear to be in some sort of dungeon, with no way out. near you, there appears to be the remnants of \na past adventurer. you take his rusty gear, and venture deeper.")
 while player.is_alive():
@@ -56,4 +55,6 @@ while player.is_alive():
         elif inv_choice == '4':
             continue
     elif choice == '4':
+        print(f"you made it to depth {depth}!")
         break
+        

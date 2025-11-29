@@ -1,4 +1,4 @@
-from engine.characters.enemies import Goblin, Zombie, enemy_drop
+from engine.characters.enemies import Goblin, Zombie, enemy_drop, Dragon
 from engine.characters.player import player
 import time
 #picks an enemy to fight based on the player's level.
@@ -10,7 +10,7 @@ def pick_enemy():
         enemy = Zombie()
         return enemy
     else:
-        return Zombie()
+        return Dragon()
 
 def combat():
     enemy = pick_enemy()
@@ -25,11 +25,15 @@ def combat():
             enemy.give_exp(player)
             player.check_for_possible_level_up()
             enemy_drop()
+            #end of the game stuff
+            if isinstance(enemy, Dragon):
+                print("you defeated the dragon! you finished the game! you're still stuck in the dungeon though.")
+                exit()
             break #end the encounter
         #if the enemy did not die, they attack the player    
         else:
             enemy.attack(player)
-            time.sleep(1.3)
+            time.sleep(0.1)
         #checks if player dies    
         if not player.is_alive():
             print("you died!")
