@@ -4,7 +4,6 @@ this is a simple dungeon crawler, where you're forced to go through a dangerous 
 ## How to Play
 
 1. Clone this repository:
-   git clone https://github.com/yourusername/dungeon-crawler.git
 
 2. Navigate to the game folder.
 
