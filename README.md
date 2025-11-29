@@ -4,11 +4,11 @@ this is a simple dungeon crawler, where you're forced to go through a dangerous 
 ## How to Play
 
 1. Clone this repository:
-   git clone https://github.com/yourusername/dungeon-crawler.git
+   git clone https://github.com/Nicolas-Larroza/Zeen.git
+   
+3. Navigate to the game folder.
 
-2. Navigate to the game folder.
-
-3. Run the game:
+4. Run the game:
    python game.py
 
 ## Features
