@@ -74,16 +74,15 @@ class HealingPotion(Consumable):
         
         
 
+
 bronze_sword = Weapon('001', 'Bronze Sword', 'a basic ass sword you can cut with.', 4, 0)
-steel_sword = Weapon('002', "Steel Sword", "the best sword in the game! (at the time of coding the description.)", 10, 0)
+steel_sword = Weapon('002', "Steel Sword", ")", 10, 0)
 bronze_helmet = Armor('003', 'Bronze helmet', 'a basic helmet to protect that brain of yours.',0, 1)
 bronze_chestplate = Armor('004', 'Bronze chestplate', 'a basic chestplate to hide those nasty chest hairs.', 0, 4)
 bronze_pants = Armor('005', 'Bronze pants', 'you can wear these!',0, 2)
 bronze_feet = Armor('006', 'Bronze boots', 'to stop your socks from getting wet',0, 1 )
     
-
-                
-
+            
 
 def starter_pack():
     player_inventory.add_item(bronze_sword)

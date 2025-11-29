@@ -3,7 +3,7 @@ import random
 import engine.logic.inventory as inv
 from engine.logic.combat import combat
 from engine.logic.inventory import player_inventory
-#i know this probably should go elsewhere, but i cant get it to work... fuck it. its clean enough, right?
+
 def explore():
     print("you venture deeper...")
     if random.random() < 0.70:

@@ -1,0 +1,63 @@
+{
+    "items" : {
+        "bronze_sword" : {
+            "id" : 1,
+            "name" : "Bronze Sword",
+            "description" : "A basic ass sword you can cut and thrust with.",
+            "damage" : 3,
+            "defense" : 0
+
+        },
+        "bronze_helmet" : {
+            "id" : 2,
+            "name" : "Bronze Helmet",
+            "description" : "A basic helmet to protect that brain of yours!",
+            "damage" : 0,
+            "defense" : 1
+
+        },
+        "bronze_chestplate" : {
+            "id" : 3,
+            "name" : "Bronze Chestplate",
+            "description" : "a basic chestplate to hide those nasty chest hairs.",
+            "damage" : 0,
+            "defense" : 2
+
+        },
+        "bronze_leggins" : {
+            "id" : 4,
+            "name" : "Bronze Leggins",
+            "description" : "you can wear these!",
+            "damage" : 0,
+            "defense" : 1
+
+        },
+        "bronze_feet" : {
+            "id" : 5,
+            "name" : "Bronze Boots",
+            "description" : "to stop your socks from getting wet",
+            "damage" : 0,
+            "defense" : 1
+
+        },
+        "steel_sword" : {
+            "id" : 6,
+            "name" : "Steel Sword",
+            "description" : "the best sword in the game! (at the time of writing the description.)",
+            "damage" : 5,
+            "defense" : 0
+
+        },
+        "smol_healing_potion" : {
+            "id" : 7,
+            "name" : "Small Healing Potion",
+            "description" : "its a potion... that heals you... and it's small... pretty self-explanatory.",
+            "effect_amount" : 10
+
+        }
+        
+    }
+
+
+
+}

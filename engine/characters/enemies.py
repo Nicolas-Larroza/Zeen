@@ -35,4 +35,4 @@ def enemy_drop():
         healing_potion = inv.HealingPotion('007', 'Healing potion', 'its a potion... that heals you... name is pretty self-explanatory.', 50)
         print("enemy dropped a Healing potion!")
         inv.player_inventory.add_item(healing_potion)
-        print(healing_potion.effect_amount)
+        
