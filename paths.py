@@ -1,6 +1,6 @@
 import os
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Path to items.json (adjust "../data" as needed)
-ITEM_PATH = os.path.join(BASE_DIR, "..", "data", "items.json")
-print(BASE_DIR)
+ITEM_PATH = os.path.join(BASE_DIR, "engine", "data", "items.json")
+ITEM_PATH = os.path.abspath(ITEM_PATH)
