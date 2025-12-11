@@ -26,11 +26,14 @@ while player.is_alive():
     print('[4] Quit')
         
     choice = input(">")
+    
     if choice == '1':
         depth += 1
         explore()
+        
     elif choice == '2':
         print(player.see_stats())
+        
     elif choice == '3':
         player_inventory.see_inventory()
         print("[1] Equip/use Item")
@@ -41,21 +44,27 @@ while player.is_alive():
         if inv_choice == '1':
             print('Which item do you want to equip/use?')
             item_equip_choice = int(input(">"))
+            
             if isinstance(player_inventory.items[item_equip_choice], inv.EquippableItem):
                 player.equip_item(player_inventory.items[item_equip_choice])
+                
             elif isinstance(player_inventory.items[item_equip_choice], inv.Consumable):
                 player_inventory.items[item_equip_choice].use(player)
                 player_inventory.remove_item(player_inventory.items[item_equip_choice])
+                
         elif inv_choice == '2':
             print('Which item do you want to unequip?')
             item_equip_choice = int(input(">"))
             player.unequip_item(player_inventory.items[item_equip_choice])
+            
         elif inv_choice == '3':
             print("which item do you want to learn about?")
             item_choice = int(input(">"))
             print(player_inventory.items[item_choice].see_information())
+            
         elif inv_choice == '4':
             continue
+        
     elif choice == '4':
         print(f"you made it to depth {depth}!")
         break
