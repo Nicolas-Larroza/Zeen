@@ -9,7 +9,6 @@ with open(ITEM_PATH) as json_items:
 objects = {}
 
 for key, data in items.items():
-    # Determine the type of item by checking what fields exist
     if "damage" in data and data["damage"] > 0:
         obj = Weapon(
             id=data["id"],
@@ -45,7 +44,7 @@ player_inventory = Inventory()
 def starter_pack(player):
     for objt in list(objects.values())[:5]:
 
-        player_inventory.add_item(objt)
+        player_inventory.add_item(objt, notify=False)
         player.equip_item(objt)
 
     

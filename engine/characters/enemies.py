@@ -1,5 +1,4 @@
-import math
-import random
+import math, random
 from .character_framework import Npc
 import engine.logic.inventory as inv
 from .player import player
@@ -11,10 +10,9 @@ class Enemy(Npc):
         self.defense = defense
         self.exp_give = exp_give
         self.name = name
+    
     def attack(self, target : Npc):
-       
         minimum_damage = math.ceil(self.damage * 0.6)
-        #calculating damage dealt
         damage_dealt = max(0,random.randint(minimum_damage, self.damage) - target.defense)
         print(f"{self.name} attacks! It deals {damage_dealt} damage!")
         target.take_damage(damage_dealt)
